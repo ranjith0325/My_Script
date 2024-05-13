@@ -74,3 +74,63 @@ title My Bat Script
 echo Hello, world!
 pause
 ```
+
+
+
+## Bash Scripting
+
+This repository contains a collection of bash scripts used for various tasks.
+
+### Installation
+
+```
+git clone git@github.com:your-username/bash-scripts.git
+cd bash-scripts
+chmod +x *.sh
+```
+
+### Usage
+
+Each script is self-contained and can be executed independently. To run a script, navigate to the directory where
+it is located and execute the following command:
+
+```
+./script_name.sh
+```
+
+### Scripts
+
+The following scripts are included:
+
+* **install_dependencies.sh:** Installs necessary dependencies for the project.
+* **file_management.sh:** Performs file management operations (copying, renaming, deleting).
+* **database_connection.sh:** Connects to a MySQL database and executes a query.
+* **process_automation.sh:** Runs a script and opens a new terminal window.
+* **scheduled_task.sh:** Schedules a task to run a script every minute.
+* **send_email.sh:** Sends an email with an attached report.
+* **file_existence.sh:** Checks if a file exists.
+* **command_prompt_customization.sh:** Customizes the command prompt with color and title.
+
+### Contributing
+
+Contributions are welcome! Please submit pull requests with new scripts or improvements.
+
+### License
+
+This project is licensed under the MIT License.
+
+### Credits
+
+* [Your Name]
+
+## Contributing
+
+Contributions are welcome! Please submit pull requests with new scripts or improvements.
+
+### License
+
+This project is licensed under the MIT License.
+
+### Credits
+
+* [Your Name]
