@@ -1,0 +1,21 @@
+@echo off
+
+echo Attempting to connect to surajbt...
+
+:: Replace "surajbt" with the name of your Bluetooth device
+:: Note: make sure your Bluetooth adapter is turned on and your device is in pairing mode
+start "" "ms-settings:bluetooth"
+
+timeout /t 5 >nul
+
+:: Send keystrokes to pair with the device
+:: Note: the following keystrokes assume default Windows settings and may need to be modified for your specific setup
+echo ^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab}^{tab} > "%temp%\btkeystrokes.txt"
+echo ^{down}^{down}^{down}^{down} > "%temp%\btkeystrokes.txt"
+echo ^{enter} > "%temp%\btkeystrokes.txt"
+echo ^{esc} > "%temp%\btkeystrokes.txt"
+powershell -windowstyle hidden -Command "& { $wshell = New-Object -ComObject wscript.shell; $wshell.AppActivate('Bluetooth'); Start-Sleep -Milliseconds 500; $wshell.SendKeys((Get-Content '%temp%\btkeystrokes.txt' | Out-String)) }"
+
+echo Connected to surajbt.
+
+pause
