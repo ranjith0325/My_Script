@@ -48,4 +48,7 @@ echo "$(<kubectl.sha256) kubectl" | sha256sum --check
 # Install kubectl
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
+alias k='kubectl'
+
 echo "Minikube and kubectl have been installed successfully!"
+
